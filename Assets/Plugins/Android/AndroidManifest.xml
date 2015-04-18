@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tnlstore.game.pettergarten"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
+    <application
+        android:allowBackup="true">
+        <activity android:name="com.unity3d.player.UnityPlayerActivity" android:label="Pet" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen">
+	      <intent-filter>
+	        <action android:name="android.intent.action.MAIN" />
+	        <category android:name="android.intent.category.LAUNCHER" />
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:label="Pet" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen">
+	      <intent-filter>
+	        <action android:name="android.intent.action.VIEW" />
+	        <category android:name="android.intent.category.BROWSABLE" />
+	      </intent-filter>
+	    </activity>
+	    <activity android:name="com.unity3d.player.UnityPlayerProxyActivity" android:label="Pet" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen">
+	      <intent-filter>
+	        <action android:name="android.intent.action.VIEW" />
+	        <category android:name="android.intent.category.BROWSABLE" />
+	      </intent-filter>
+	    </activity>
+        <service android:name=".StatusService" />
+    </application>
+
+</manifest>
